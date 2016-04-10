@@ -1,47 +1,36 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
+<div class="pages">
+  <div class="main-post-list">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Rvanbekkum.GitHub.io : Personal page of Rob van Bekkum">
+    <ol class="post-list">
+      {% for post in paginator.posts %}
+        <li>
+          <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+          <p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}&hellip;</p>
+          <div class="post-list__meta"><time datetime="{{ post.date | date: "%-d %b %Y" }}" class="post-list__meta--date date">{{ post.date | date: "%-d %b %Y" }}</time> &#8226; <span class="post-meta__tags">on {% for tag in post.tags %}<a href="{{ site.baseurl }}tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span></div>
+          <hr class="post-list__divider">
+        </li>
+      {% endfor %}
+    </ol>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <hr class="post-list__divider ">
 
-    <title>Rob van Bekkum</title>
-  </head>
+    {% if paginator.previous_page or paginator.next_page %}
+        {% include pagination.html %}
+    {% endif %}
 
-  <body>
+  </div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/rvanbekkum">View on GitHub</a>
+  <div class="about">
+    <h1 class="post-title">About</h1>
+    <section class="about-me">
+    <p>Hi! My name is Rob van Bekkum, software developer with a broad interest.
+    I obtained my Bachelor of Science degree in Computer Science and Engineering in 2015 at the <a href="http://tudelft.nl/">Delft University of Technology</a>.
+    Currently I am attending the Software Technology track of the Computer Science Master Programme at the same university.
+    My interests particularly are in software engineering and algorithmics.</p>
 
-          <h1 id="project_title">Rob van Bekkum</h1>
-          <h2 id="project_tagline">Personal page of Rob van Bekkum</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome!</h3>
-<p>Currently this page is under construction. This default page will be replaced later on.</p>
-<p>For now you can check my <a href="https://www.linkedin.com/in/robvanbekkum">LinkedIn profile</a></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-
-
-  </body>
-</html>
+    </section>
+  </div>
+</div>
