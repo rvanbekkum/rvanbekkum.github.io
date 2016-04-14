@@ -24,13 +24,7 @@ layout: default
   </div>
 
   <div class="about">
-    <h1 class="post-title">About</h1>
-    <section class="about-me">
-    <p>Hi! My name is Rob van Bekkum, software developer with a broad interest.
-    I obtained my Bachelor of Science degree in Computer Science and Engineering in 2015 at the <a href="http://tudelft.nl/">Delft University of Technology</a>.
-    Currently I am attending the Software Technology track of the Computer Science Master Programme at the same university.
-    My interests particularly are in software engineering and algorithmics.</p>
-
-    </section>
+    {% capture about %}{% include pages/about.md %}{% endcapture %}
+    {{ about | markdownify }}
   </div>
 </div>

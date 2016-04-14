@@ -54,3 +54,26 @@ pre.highlight code,
   border: 3px solid #fff;
   border-radius:100%;
 }
+
+p + ul {
+  margin-top: -20px;
+}
+
+.verticalLine {
+  border-left: thick solid #e25440;
+  padding-left: 1.5rem;
+  margin-left: 80px;
+}
+
+.resumelogo {
+  float: left;
+}
+
+.resumedates {
+  color: #bdbdbd;
+  float: right;
+}
+
+.resume-emph {
+  font-weight: 900;
+}
