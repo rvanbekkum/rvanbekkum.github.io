@@ -129,7 +129,7 @@ Delft University of Technology
 </strong>
 <p>BSc Computer Science and Engineering</p>
 
-<p>In the first year of my Bachelor I obtained my propedeuse <span class="resume-emph">cum laude</span> with a weighted average of 9. In the second year I chose the Information and Knowledge Engineering elective courses compromising of Big Data Processing, Computational Intelligence and Datamining.
+<p>In the first year of my Bachelor I obtained my propedeuse <span class="resume-emph">cum laude</span> with a weighted average of 9. In the second year I chose the Information and Knowledge Engineering elective courses comprising of Big Data Processing, Computational Intelligence and Datamining.
 In the third year I chose for the Minor Robotics which involved the full-time development of an autonomous robot, which for our team was a <a href="http://www.tudelft.nl/en/current/latest-news/article/detail/van-cocktailrobot-tot-3d-geprinte-teenslipper/">cocktail-robot named James</a>. For my Bachelor project and thesis I worked in a team of 3 students on the development of a software system for connecting ZigBee devices to an IoT gateway. I finished my study <span class="resume-emph">cum laude</span> with a final grade of 9.5 for this project and <a href="http://repository.tudelft.nl/view/ir/uuid%3A352afb84-8714-4d23-804e-646e1a1b8c89/">thesis</a>.</p>
 
 <p><span class="resume-emph" style="color: #3db9ed">Courses:</span> Software Engineering Methods, World Perception for Robotics, Embedded Software, Software Testing and Quality Engineering, Algorithmics and more...</p>
