@@ -7,7 +7,7 @@ tags: [youtube-dl, open-source, python]
 Have you ever heard of **youtube-dl**?
 It is an application that allows you to download videos (and other media) from YouTube, but also from more than **700 other supported websites**.
 The application only requires you to have Python installed on your system and is quite simple to use.
-You just open op your terminal and pass the URL to the video you want to download to the application as follows:
+You just open up your terminal and pass the URL to the video you want to download to the application as follows:
 
 ```
 youtube-dl <VIDEO_URL>
