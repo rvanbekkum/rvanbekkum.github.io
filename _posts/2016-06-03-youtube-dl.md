@@ -13,10 +13,10 @@ You just open up your terminal and pass the URL to the video you want to downloa
 youtube-dl <VIDEO_URL>
 ```
 
-Is one of your sites not supported? Then you might want to try to add support by writing your own *extractor* for those sites in youtube-dl, which is actually not that difficult in most cases (but it depends on the site, of course).
+Is one of your sites not supported? Then you might want to try to add support by writing your own *extractor* for those sites in youtube-dl, which is in most cases actually not that difficult (but it depends on the site, of course).
 
 In this blog I will give you a quick summary of how you can add support for new sites.
-The first step thing you want to do is forking the [youtube-dl repository on GitHub](https://github.com/rg3/youtube-dl).
+The first thing you want to do is forking the [youtube-dl repository on GitHub](https://github.com/rg3/youtube-dl).
 Let's say the site you want to support is called **'my_video_site'**, then what you want to do is creating a new file called `my_video_site.py` in the `youtube-dl/extractor` directory on your fork.
 Then your extractor implementation in the `my_video_site.py` file will need to look something like the following:
 
