@@ -42,7 +42,7 @@ DSP Innovation B.V.
 <div>
 <img src="images/tudelft.svg" class="resumelogo" style="width: 40px;" />
 <div class="verticalLine" style="border-left-color: #3db9ed">
-<span class="resumedates">October 2013 - July 2016</span>
+<span class="resumedates">October 2013 - January 2017</span>
 <strong>
 <a href="http://www.tudelft.nl/" style="color: inherit;">
 Delft University of Technology
@@ -95,6 +95,23 @@ Delft University of Technology
 <span class="resumedates">April 2016 - July 2016</span>
 <em>TI2316 Automaten, Talen en Berekenbaarheid</em>
 <p>Second year of assisting in the course TI2316 Automaten, Talen en Berekenbaarheid, a second-year course covering fundamental topics among which are finite automata, Turing machines and computability theory.</p>
+
+<span class="resumedates">September 2016 - November 2016</span>
+<em>TI1316TH Algorithms and Data Structures</em>
+<p>Assisting in managing the course TI1316 Algorithms and Data Structures, a self-study CSE course for bridging and Minor students covering standard data structures such as stacks, queues and heaps, sorting algorithms, searching algorithms and graph algorithms. Students submit their solutions for weekly analysis and implementation assignments in Weblab, an online platform for programming education.</p>
+<ul>
+	<li>Managing and answering student questions.</li>
+	<li>Reviewing and grading weekly assignments.</li>
+</ul>
+
+<span class="resumedates">September 2016 - January 2017</span>
+<em>IN4301 Advanced Algorithms</em>
+<p>Assisting in the course IN4301 Advanced Algorithms, a MSc Computer Science course about advanced algorithmic techniques like general approximation techniques, kernelization techniques and integer programming.</p>
+<ul>
+	<li>Reviewing and grading homework and programming assignments of students.</li>
+	<li>Assisting students during the weekly lab hours.</li>
+	<li>Assisting in grading exams of the course.</li>
+</ul>
 </div>
 </div>
 
@@ -160,10 +177,12 @@ In the third year I chose for the Minor Robotics which involved the full-time de
 
 * Git
 * SVN
+* TFS
 
 ### Systems and (Development) Frameworks
 
 * Android
+* ANTLR
 * Apache Pig
 * Arduino
 * Microsoft Dynamics NAV
@@ -172,11 +191,17 @@ In the third year I chose for the Minor Robotics which involved the full-time de
 
 ### Miscellaneous
 
+* Adobe Illustrator
+* Adobe Photoshop
+* Android Studio
+* Bash
 * Continuous Integration
-* Illustrator
+* Eclipse
+* IntelliJ IDEA
 * \\(\LaTeX\\)
 * Maple
 * Markdown
-* Photoshop
+* PyCharm
 * Scrum
 * Unix
+* Visual Studio
