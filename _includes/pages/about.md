@@ -18,7 +18,7 @@ WSB Solutions B.V.
 </strong>
 <p>Software Developer</p>
 
-<p>At WSB Solutions I work on the development of NAV objects, mainly report objects, in the development environment of <a href="https://www.microsoft.com/en-us/dynamics/erp-nav-overview.aspx">Microsoft Dynamics NAV</a>. These objects are defined in C/AL, a database-specific programming language to retrieve, insert, modify and remove records from the relational SQL-based database connected to NAV. Further, I work on designing custom report layouts in <a href="http://www.idyn.nl/products/nav-development/document-creator">Document Creator</a>.</p>
+<p>At WSB Solutions I work on the development of NAV objects, mainly report objects, in the development environment of <a href="https://www.microsoft.com/en-us/dynamics/erp-nav-overview.aspx">Microsoft Dynamics NAV</a>. These objects are defined in C/AL, a database-specific programming language to retrieve, insert, modify and remove records from the relational SQL-based database connected to NAV. I also work on the C# development of <a href="http://www.document-creator.com/">Document Creator</a> and in particular on the C/AL parsing and conversion solutions for classic reports.</p>
 </div>
 
 </div>
@@ -112,6 +112,10 @@ Delft University of Technology
 	<li>Assisting students during the weekly lab hours.</li>
 	<li>Assisting in grading exams of the course.</li>
 </ul>
+
+<span class="resumedates">February 2017 - April 2017</span>
+<em>TI1316 Algorithms and Data Structures</em>
+<p>Second year of assisting in the course TI1316 Algorithms and Data Structures, a first-year course covering data structures such as stacks, queues and heaps, sorting algorithms, searching algorithms and graph algorithms.</p>
 </div>
 </div>
 
@@ -129,8 +133,8 @@ Delft University of Technology
 </strong>
 <p>MSc Computer Science: Software Technology</p>
 
-<p>Currently I am doing my Master in Computer Science in which I want to specialize myself into the field of Algorithmics.</p>
-<p><span class="resume-emph" style="color: #3db9ed">Courses:</span> Advanced Algorithms, Algorithms for Planning and Scheduling, Compiler Construction, Mining Software Repositories, Randomized Algorithms, Software Architecture and more...</p>
+<p>Currently I am doing my Master in Computer Science. At the moment I am working on my Master Thesis in the <a href="http://www.alg.ewi.tudelft.nl/">Algorithmics group</a> of the Software Technology department at the EEMCS faculty.</p>
+<p><span class="resume-emph" style="color: #3db9ed">Courses:</span> Advanced Algorithms, Algorithms for Planning and Scheduling, Compiler Construction, Embedded Real-Time Systems, Mining Software Repositories, Randomized Algorithms, Security and Cryptography, Software Architecture and more...</p>
 </div>
 
 </div>
