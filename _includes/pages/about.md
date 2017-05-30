@@ -18,7 +18,7 @@ WSB Solutions B.V.
 </strong>
 <p>Software Developer</p>
 
-<p>At WSB Solutions I work on the development of NAV objects, mainly report objects, in the development environment of <a href="https://www.microsoft.com/en-us/dynamics/erp-nav-overview.aspx">Microsoft Dynamics NAV</a>. These objects are defined in C/AL, a database-specific programming language to retrieve, insert, modify and remove records from the relational SQL-based database connected to NAV. I also work on the C# development of <a href="http://www.document-creator.com/">Document Creator</a> and in particular on the C/AL parsing and conversion solutions for classic reports.</p>
+<p>At WSB Solutions I work on the development of NAV objects, mainly report objects, in the development environment of <a href="https://www.microsoft.com/en-us/dynamics/erp-nav-overview.aspx">Microsoft Dynamics NAV</a>. These objects are defined in C/AL, a database-specific programming language to retrieve, insert, modify and remove records from the relational SQL-based database connected to NAV. I also work on the C# development of <a href="http://www.document-creator.com/">Document Creator</a> and in particular on the C/AL parsing and conversion solutions for classic reports and RDLC layouts.</p>
 </div>
 
 </div>
@@ -42,7 +42,7 @@ DSP Innovation B.V.
 <div>
 <img src="images/tudelft.svg" class="resumelogo" style="width: 40px;" />
 <div class="verticalLine" style="border-left-color: #3db9ed">
-<span class="resumedates">October 2013 - January 2017</span>
+<span class="resumedates">October 2013 - July 2017</span>
 <strong>
 <a href="http://www.tudelft.nl/" style="color: inherit;">
 Delft University of Technology
@@ -50,7 +50,7 @@ Delft University of Technology
 </strong>
 <p>Teaching Assistant</p>
 
-<p>As teaching assistant I have helped in several courses of the Computer Science and Engineering Bachelor programme at Delft University of Technology. The tasks comprise of composing study material and assignments, grading homework assignments, guiding projects and composing and grading exams.</p>
+<p>As teaching assistant I have helped in several courses of the Computer Science and Engineering Bachelor programme and Computer Science Master programme at Delft University of Technology. The tasks comprise of composing study material and assignments, grading homework assignments, guiding projects and composing and grading exams.</p>
 
 <span class="resumedates">October 2013 - November 2013</span>
 <em>Homework Assistance Classes</em>
@@ -116,6 +116,10 @@ Delft University of Technology
 <span class="resumedates">February 2017 - April 2017</span>
 <em>TI1316 Algorithms and Data Structures</em>
 <p>Second year of assisting in the course TI1316 Algorithms and Data Structures, a first-year course covering data structures such as stacks, queues and heaps, sorting algorithms, searching algorithms and graph algorithms.</p>
+
+<span class="resumedates">May 2017 - July 2017</span>
+<em>TI2316 Automata, Languages and Computability</em>
+<p>Third year of assisting in the course TI2316 Automata, Languages and Computability, a second-year course covering fundamental topics among which are finite automata, Turing machines and computability theory.</p>
 </div>
 </div>
 
