@@ -1,8 +1,8 @@
 ---
-title:  "Creating your own Extractor for youtube-dl"
+title:  "DESOSA 2016 - Youtube-dl"
 date:   2016-06-03 18:48
 categories: [youtube-dl]
-tags: [youtube-dl, open-source, python]
+tags: [youtube-dl, open-source, python, DESOSA]
 ---
 Have you ever heard of **youtube-dl**?
 It is an application that allows you to download videos (and other media) from YouTube, but also from more than **700 other supported websites**.
@@ -12,6 +12,13 @@ You just open up your terminal and pass the URL to the video you want to downloa
 ```
 youtube-dl <VIDEO_URL>
 ```
+
+## Youtube-dl architecture
+
+If you are interested in finding out more about youtube-dl and its software architecture you may want to check out the [DESOSA: 2016](https://www.gitbook.com/book/delftswa/desosa2016/details) (*Delft Students on Software Architecture: 2016*) book. In a group of four we contributed to this book by writing the [chapter on youtube-dl](https://delftswa.gitbooks.io/desosa2016/content/youtube-dl/chapter.html).
+In this chapter you can find out all about the application, its developers, its features and architecture. You can also check out chapters on other interesting software systems such as [Atom](https://delftswa.gitbooks.io/desosa2016/content/atom/chapter.html), [GitLab](https://delftswa.gitbooks.io/desosa2016/content/gitlab/chapter.html) and [Ruby on Rails](https://delftswa.gitbooks.io/desosa2016/content/rails/chapter.html) in this book to learn more about them. Enjoy reading!
+
+## Creating your own extractor for youtube-dl
 
 Is one of your sites not supported? Then you might want to try to add support by writing your own *extractor* for those sites in youtube-dl, which is in most cases actually not that difficult (but it depends on the site, of course).
 
@@ -62,10 +69,7 @@ When your extractor is ready you also need to update the `extractors.py` file in
 from .my_video_site import MyVideoSiteIE
 ```
 
-And that's it! Now you should be able to download videos from the site for which you just added an extractor. 
+And that's it! Now you should be able to download videos from the site for which you just added an extractor.
 If you think your extractor may be useful to others you can file a pull request to the youtube-dl repository as well.
-
-If you are interested in finding out more about youtube-dl and its software architecture you may want to check out the [DESOSA: 2016](https://www.gitbook.com/book/delftswa/desosa2016/details) (*Delft Students on Software Architecture: 2016*) book. In a group of four we contributed to this book by writing the [chapter on youtube-dl](https://delftswa.gitbooks.io/desosa2016/content/youtube-dl/chapter.html).
-In this chapter you can find out all about the application, its developers, its features and architecture. You can also check out chapters on other interesting software systems such as [Atom](https://delftswa.gitbooks.io/desosa2016/content/atom/chapter.html), [GitLab](https://delftswa.gitbooks.io/desosa2016/content/gitlab/chapter.html) and [Ruby on Rails](https://delftswa.gitbooks.io/desosa2016/content/rails/chapter.html) in this book to learn more about them. Enjoy reading!
 
 Cheers!
