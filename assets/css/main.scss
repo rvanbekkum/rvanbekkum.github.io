@@ -1,0 +1,46 @@
+---
+sitemap: false
+---
+
+/*
+ *
+ *  Moon
+ *
+ *  Designer: Taylan Tatlı
+ *  WEB: http://taylantatli.me
+ *
+*/
+
+// Partials
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "site";
+@import "typography";
+@import "elements";
+@import "syntax";
+@import "nav";
+@import "vendor/fonts";
+@import "vendor/font-awesome";
+@import "vendor/animate";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+.verticalLine {
+  border-left: thick solid #e25440;
+  padding-left: 1.5rem;
+  margin-left: 80px;
+}
+
+.resumelogo {
+  float: left;
+}
+
+.resumedates {
+  color: #bdbdbd;
+  float: right;
+}
+
+.resume-emph {
+  font-weight: 900;
+}

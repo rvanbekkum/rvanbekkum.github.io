@@ -1,11 +1,22 @@
 ---
-title:  "DESOSA 2016 - Youtube-dl"
-date:   2016-06-03 18:48
-categories: [youtube-dl]
-tags: [youtube-dl, open-source, python, DESOSA]
+layout: post
+title:  "Youtube-dl & DESOSA 2016"
+date:   2016-06-03
+excerpt: "Have you ever heard of youtube-dl? It is an application that allows you to download videos (and other media) from Youtube, but also from more than 700 other supported websites."
+tag:
+- youtube-dl
+- open-source
+- python
+comments: true
 ---
+
 Have you ever heard of **youtube-dl**?
+
 It is an application that allows you to download videos (and other media) from YouTube, but also from more than **700 other supported websites**.
+The application is actively maintained by a group of developers, and as its source can be found on a publicly available [repository on Github](https://github.com/rg3/youtube-dl) anyone is free to contribute.
+
+## Usage
+
 The application only requires you to have Python installed on your system and is quite simple to use.
 You just open up your terminal and pass the URL to the video you want to download to the application as follows:
 
@@ -13,10 +24,15 @@ You just open up your terminal and pass the URL to the video you want to downloa
 youtube-dl <VIDEO_URL>
 ```
 
-## Youtube-dl architecture
+The application also allows you to specify options for extracting audio only, bypassing geological restrictions, specifying filters for playlists and so on. 
+If you're not too experienced in using terminals then don't worry; there are also applications available around GitHub that offer a more friendly user interface, such as [youtube-dlG](https://github.com/MrS0m30n3/youtube-dl-gui).
+
+## Youtube-dl architecture in DESOSA 2016
 
 If you are interested in finding out more about youtube-dl and its software architecture you may want to check out the [DESOSA: 2016](https://www.gitbook.com/book/delftswa/desosa2016/details) (*Delft Students on Software Architecture: 2016*) book. In a group of four we contributed to this book by writing the [chapter on youtube-dl](https://delftswa.gitbooks.io/desosa2016/content/youtube-dl/chapter.html).
 In this chapter you can find out all about the application, its developers, its features and architecture. You can also check out chapters on other interesting software systems such as [Atom](https://delftswa.gitbooks.io/desosa2016/content/atom/chapter.html), [GitLab](https://delftswa.gitbooks.io/desosa2016/content/gitlab/chapter.html) and [Ruby on Rails](https://delftswa.gitbooks.io/desosa2016/content/rails/chapter.html) in this book to learn more about them. Enjoy reading!
+
+![DESOSA Logo](https://www.gitbook.com/@delftswa/avatar)
 
 ## Creating your own extractor for youtube-dl
 
