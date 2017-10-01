@@ -6,7 +6,6 @@ excerpt: "Project of the Minor Robotics 2014/2015, Delft University of Technolog
 project: true
 tag:
 - robotics
-- minor
 - delft
 comments: true
 ---
