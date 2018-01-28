@@ -10,7 +10,8 @@ tag:
 comments: true
 ---
 
-**NOTE:** This blog is not finished yet. {: .notice}
+**NOTE:** This blog is not finished yet.
+{: .notice}
 
 As a C/SIDE developer in Microsoft Dynamics NAV, you may often be faced with developing layouts for customer-specific reports. Even though the development environment offers a quite intuitive way for defining datasets for these reports, the standard report tooling for defining their layouts, known as RDLC, proves to be much more of a hassle to work with and often makes simple list or document layouts much more complex than they need to be.
 
