@@ -10,6 +10,8 @@ tag:
 comments: true
 ---
 
+**NOTE:** This blog is not finished yet. {: .notice}
+
 As a C/SIDE developer in Microsoft Dynamics NAV, you may often be faced with developing layouts for customer-specific reports. Even though the development environment offers a quite intuitive way for defining datasets for these reports, the standard report tooling for defining their layouts, known as RDLC, proves to be much more of a hassle to work with and often makes simple list or document layouts much more complex than they need to be.
 
 With Document Creator, however, creating or modifying custom report layouts is immensely simplified and is just a matter of minutes instead of hours! Through the intuitive report designer and the separation of report-logic and layout/presentation also end-users without technical knowledge can make simple changes. Also, Document Creator ships with a set of template layouts for the most-used standard reports (e.g., invoices, orders, etc.), which can get you started even faster!
@@ -86,15 +88,15 @@ Opening the Document Creator report designer for our new layout shows us the def
 ### Step 1: Showing the list of customers with non-zero balance
 
 First, we add fields from the Customer datasource are placed on the corresponding DataBand in a TextObject, so that there will be a row for each customer with its No., Name and Balance (LCY).
-This can be done by simply dragging columns from the "Data" window on the right, under "Data Sources | Customer | Columns", onto the DataBand:
+This can be done by simply dragging columns from the "Data" window on the right, under "Data Sources &#124; Customer &#124; Columns", onto the DataBand:
 
 {% capture addingfields %}
 /assets/img/dcr/customerlist/adding_fields.png
 {% endcapture %}
 {% include gallery images=addingfields caption="The layout with fields from the Customer datasource added to the Customer_ databand." cols=1 %}
 
-Next, we add a HeaderBand to show captions above the fields we just added to the Customer DataBand. We can add a Header- and FooterBand for the customer data by pressing the right mouse button on the Customer_ DataBand and choosing "Add / move band | Header".
-Next, we can add the labels by again simply dragging them from the "Data" window on the right, under "Data Sources | Customer | Labels" onto the HeaderBand:
+Next, we add a HeaderBand to show captions above the fields we just added to the Customer DataBand. We can add a Header- and FooterBand for the customer data by pressing the right mouse button on the Customer_ DataBand and choosing "Add / move band &#124; Header".
+Next, we can add the labels by again simply dragging them from the "Data" window on the right, under "Data Sources &#124; Customer &#124; Labels" onto the HeaderBand:
 
 {% capture headerband %}
 /assets/img/dcr/customerlist/adding_header.png
