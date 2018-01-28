@@ -26,7 +26,7 @@ But first, let's take a short look at the definition of the report dataset for o
 First off, we see that the dataset consists of fields from the Customer table (e.g., Balance, Name, "Salesperson Code") and fields from the Cust. Ledger Entry table (e.g., Amount, Description, "Posting Date") for the customers in the dataset.
 
 {% capture dataset %}
-./assets/img/dcr/customerlist/dataset2.png
+/assets/img/dcr/customerlist/dataset2.png
 {% endcapture %}
 {% include gallery images=dataset caption="The C/SIDE report object defining the dataset for our Customer List layout." cols=1 %}
 
@@ -44,9 +44,9 @@ As no translation with this tag exists by default, a new translation will be gen
 As shown in the screenshots below, we can edit the newly generated translation entries on the Document Creator Translations page.
 
 {% capture translations %}
-./assets/img/dcr/customerlist/translations.png
-./assets/img/dcr/customerlist/translations_2.png
-./assets/img/dcr/customerlist/translations_3.png
+/assets/img/dcr/customerlist/translations.png
+/assets/img/dcr/customerlist/translations_2.png
+/assets/img/dcr/customerlist/translations_3.png
 {% endcapture %}
 {% include gallery images=translations caption="The Document Creator Translations page allows one to edit the captions used in DCR report layouts by anyone, at any time." cols=2 %}
 
@@ -60,9 +60,9 @@ After that, we see that a new entry appears in the page with description "Docume
 Note that you can edit the description of this layout in the page from the default "Document Creator Layout" to something more descriptive, e.g., changing it to something like "Customer List Layout DCR".
 
 {% capture newlayout %}
-./assets/img/dcr/customerlist/customreportlayouts_new.png
-./assets/img/dcr/customerlist/customreportlayouts_new_2.png
-./assets/img/dcr/customerlist/customreportlayouts_new_3.png
+/assets/img/dcr/customerlist/customreportlayouts_new.png
+/assets/img/dcr/customerlist/customreportlayouts_new_2.png
+/assets/img/dcr/customerlist/customreportlayouts_new_3.png
 {% endcapture %}
 {% include gallery images=newlayout caption="Creating a completely new Document Creator layout from the Custom Report Layouts (Document Creator) page." cols=3 %}
 
@@ -76,8 +76,8 @@ To edit the new layout, we have two options in the "Custom Report Layouts (Docum
 In most cases, you probably want to pick the second option, so that you can preview the effect of your changes to the layout with actual data. With the Document Creator report designer open, you can preview your layout by pressing the "Preview" button (Ctrl + F5).
 
 {% capture preview %}
-./assets/img/dcr/customerlist/preview.png
-./assets/img/dcr/customerlist/preview_2.png
+/assets/img/dcr/customerlist/preview.png
+/assets/img/dcr/customerlist/preview_2.png
 {% endcapture %}
 {% include gallery images=preview caption="Previewing the blank customer list layout from within the Document Creator report designer." cols=2 %}
 
@@ -89,7 +89,7 @@ First, we add fields from the Customer datasource are placed on the correspondin
 This can be done by simply dragging columns from the "Data" window on the right, under "Data Sources | Customer | Columns", onto the DataBand:
 
 {% capture addingfields %}
-./assets/img/dcr/customerlist/adding_fields.png
+/assets/img/dcr/customerlist/adding_fields.png
 {% endcapture %}
 {% include gallery images=addingfields caption="The layout with fields from the Customer datasource added to the Customer_ databand." cols=1 %}
 
@@ -97,16 +97,16 @@ Next, we add a HeaderBand to show captions above the fields we just added to the
 Next, we can add the labels by again simply dragging them from the "Data" window on the right, under "Data Sources | Customer | Labels" onto the HeaderBand:
 
 {% capture headerband %}
-./assets/img/dcr/customerlist/adding_header.png
-./assets/img/dcr/customerlist/adding_header_2.png
-./assets/img/dcr/customerlist/adding_header_3.png
+/assets/img/dcr/customerlist/adding_header.png
+/assets/img/dcr/customerlist/adding_header_2.png
+/assets/img/dcr/customerlist/adding_header_3.png
 {% endcapture %}
 {% include gallery images=headerband caption="Adding a Header- and FooterBand and adding labels." cols=3 %}
 
 Now, we can again preview the layout by pressing the "Preview" button (Ctrl + F5):
 
 {% capture withzerobalance %}
-./assets/img/dcr/customerlist/exclude_zerobalance.png
+/assets/img/dcr/customerlist/exclude_zerobalance.png
 {% endcapture %}
 {% include gallery images=withzerobalance caption="A preview of the layout" cols=1 %}
 
@@ -114,9 +114,9 @@ What we notice though, is that also customers are shown with a balance of zero. 
 This means that we set the "VisibleExpression" property for the databand to `[Customer.BalanceLCY] != 0`, as shown in the screenshots below:
 
 {% capture withoutzerobalance %}
-./assets/img/dcr/customerlist/exclude_zerobalance_2.png
-./assets/img/dcr/customerlist/exclude_zerobalance_3.png
-./assets/img/dcr/customerlist/exclude_zerobalance_4.png
+/assets/img/dcr/customerlist/exclude_zerobalance_2.png
+/assets/img/dcr/customerlist/exclude_zerobalance_3.png
+/assets/img/dcr/customerlist/exclude_zerobalance_4.png
 {% endcapture %}
 {% include gallery images=withoutzerobalance caption="Showing only the customers with non-zero balance by defining a *VisibleExpression*." cols=3 %}
 
@@ -127,15 +127,15 @@ This means that we set the "VisibleExpression" property for the databand to `[Cu
 Adding a total to the FooterBand:
 
 {% capture addingtotal %}
-./assets/img/dcr/customerlist/create_total.png
-./assets/img/dcr/customerlist/create_total_2.png
-./assets/img/dcr/customerlist/create_total_3.png
+/assets/img/dcr/customerlist/create_total.png
+/assets/img/dcr/customerlist/create_total_2.png
+/assets/img/dcr/customerlist/create_total_3.png
 {% endcapture %}
 {% include gallery images=addingtotal caption="Adding a total balance over all customers on the footer of the layout." cols=3 %}
 
 {% capture addingtotalresult %}
-./assets/img/dcr/customerlist/create_total_4.png
-./assets/img/dcr/customerlist/create_total_5.png
+/assets/img/dcr/customerlist/create_total_4.png
+/assets/img/dcr/customerlist/create_total_5.png
 {% endcapture %}
 {% include gallery images=addingtotalresult caption="Previewing the resulting layout with the total added." cols=2 %}
 
@@ -144,15 +144,15 @@ Adding a total to the FooterBand:
 Grouping the customers on salesperson, and adding group-totals:
 
 {% capture grouponsalesperson %}
-./assets/img/dcr/customerlist/group_on_salesperson.png
-./assets/img/dcr/customerlist/group_on_salesperson_2.png
-./assets/img/dcr/customerlist/group_on_salesperson_3.png
+/assets/img/dcr/customerlist/group_on_salesperson.png
+/assets/img/dcr/customerlist/group_on_salesperson_2.png
+/assets/img/dcr/customerlist/group_on_salesperson_3.png
 {% endcapture %}
 {% include gallery images=grouponsalesperson caption="Grouping the customers through a GroupHeader-band with condition `[Customer.SalespersonCode]`" cols=3 %}
 
 {% capture grouponsalespersontotal %}
-./assets/img/dcr/customerlist/group_on_salesperson_4.png
-./assets/img/dcr/customerlist/group_on_salesperson_5.png
+/assets/img/dcr/customerlist/group_on_salesperson_4.png
+/assets/img/dcr/customerlist/group_on_salesperson_5.png
 {% endcapture %}
 {% include gallery images=grouponsalespersontotal caption="Adding fields to the GroupHeader- and GroupFooterBand with a grouptotal per salesperson." cols=2 %}
 
@@ -161,8 +161,8 @@ Grouping the customers on salesperson, and adding group-totals:
 Making some final changes:
 
 {% capture final %}
-./assets/img/dcr/customerlist/final.png
-./assets/img/dcr/customerlist/final_preview.png
+/assets/img/dcr/customerlist/final.png
+/assets/img/dcr/customerlist/final_preview.png
 {% endcapture %}
 {% include gallery images=final caption="Final changes to the layout, adding the ledger entry data for each customer." cols=2 %}
 
@@ -173,7 +173,7 @@ You can easily change the layout selections by selecting the "Report Layout Sele
 To change the layout selection for multiple/all reports, you can select the report layouts in the "Custom Report Layouts" page and then press the "Fast Report Layout Selection..." button to change the layout selection automatically for all companies to the selected Document Creator report layouts.
 
 {% capture reportlayoutselection %}
-./assets/img/dcr/customerlist/reportlayoutselection.png
-./assets/img/dcr/customerlist/fastreportlayoutselection.png
+/assets/img/dcr/customerlist/reportlayoutselection.png
+/assets/img/dcr/customerlist/fastreportlayoutselection.png
 {% endcapture %}
 {% include gallery images=reportlayoutselection caption="Changing report layout selections from the Custom Report Layouts (Document Creator) page." cols=2 %}
