@@ -51,9 +51,9 @@ This command will create an NAV Docker container named "DcrDemoNav110" based on 
 The options added, have the following function:
 * **accept_eula**: Required option, which is used to indicate that you accept the Dynamics NAV EULA.
 * **includeCSide**: Option which indicates that the Windows client and C/SIDE development environment should be made available, for which desktop shortcuts will be created automatically. Note that this option requires you to supply a license file. You can also leave out this option and use the NAV2018 Windows Client on your own system, connecting to the following server-address: `DcrDemoNav110:7046/nav`
-* **licenseFile**: Option that expects the file-path to the NAV license you want to use (i.e., `.flf` file).
+* **licenseFile**: Option that expects the file-path to the NAV license you want to use (i.e., an `.flf` file).
 
-If you have already downloaded the `microsoft/dynamics-nav:2018` image earlier, then Docker will only download the additional files for the Document Creator.
+If you have already downloaded the `microsoft/dynamics-nav:2018` image earlier, then Docker will only download the additional files for the Document Creator image.
 After the download of the image is completed, the setup of the container should only take about half a minute. After that, you can start using NAV with the Document Creator Demo by opening one of the desktop shortcuts that were automatically created by Docker.
 
 **NOTE:** The *NavContainerHelper* module will automatically create at least the following desktop shortcuts: "DcrDemoNav110 Web Client" (shortcut to the Web Client), "DcrDemoNav110 Command Prompt" (container prompt which you can use to access the files in the container) and "DcrDemoNav110 Powershell Prompt" (Powershell prompt specifically for executing NAV Powershell commands).
