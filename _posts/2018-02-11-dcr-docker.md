@@ -15,7 +15,7 @@ Docker allows you to setup an NAV installation and get you started quickly, by c
 To explore the features of Document Creator, you can create such a container using the `documentcreator/nav2018_demo` image, running just a single command!
 
 If you are not familiar with Docker yet, you may want to continue reading the next section that provides instructions for setting up Docker on Windows for running NAV containers.
-If you have setup an NAV container earlier, you can skip ahead to the last section, which shows you how to create a container with NAV2018 and the latest demo version of Document Creator.
+If you have setup an NAV container earlier, you can skip ahead to the last section, which shows you how to create a container with NAV2018 with the latest demo version of Document Creator preinstalled.
 
 ## Installing Docker for Windows
 
