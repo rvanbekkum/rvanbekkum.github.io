@@ -11,7 +11,7 @@ comments: true
 ---
 
 Document Creator is an add-on that offers an intuitive report designer for Dynamics NAV, separating report-logic from layout/presentation. If you are interested in exploring the various features of Document Creator, but don't want to go through the steps of installing the Demo into your existing NAV environment, then Docker might help you out!
-Docker allows you to quickly setup and get going, by creating something referred to as a *container*, which allows you to run a preconfigured NAV environment with everyting you need in isolation.
+Docker allows you to quickly setup and get you going, by creating something referred to as a *container*, which allows you to run a preconfigured, isolated NAV environment with everyting you need.
 To explore the features of Document Creator, you can create such a container using the `documentcreator/nav2018_demo` image, running just a single command!
 
 If you are not familiar with Docker yet, you may want to continue reading the next section that provides instructions for setting up Docker on Windows for running NAV containers.
@@ -56,5 +56,5 @@ The options added, have the following function:
 If you have already downloaded the `microsoft/dynamics-nav:2018` image earlier, then Docker will only download the additional files for the Document Creator.
 After the download of the image is completed, the setup of the container should only take about half a minute. After that, you can start using NAV with the Document Creator Demo by opening one of the desktop shortcuts that were automatically created by Docker.
 
-**NOTE:** The *NavContainerHelper* module will automatically create (at least) the following desktop shortcuts: "DcrDemoNav110 Web Client" (shortcut to the Web Client), "DcrDemoNav110 Command Prompt" (container prompt which you can use to access the files in the container) and "DcrDemoNav110 Powershell Prompt" (Powershell prompt specifically for executing NAV Powershell commands).
+**NOTE:** The *NavContainerHelper* module will automatically create at least the following desktop shortcuts: "DcrDemoNav110 Web Client" (shortcut to the Web Client), "DcrDemoNav110 Command Prompt" (container prompt which you can use to access the files in the container) and "DcrDemoNav110 Powershell Prompt" (Powershell prompt specifically for executing NAV Powershell commands).
 {: .notice}
