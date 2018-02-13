@@ -209,4 +209,4 @@ To change the layout selection for multiple/all reports, you can select the repo
 {% include gallery images=reportlayoutselection caption="Changing report layout selections from the Custom Report Layouts (Document Creator) page." cols=2 %}
 
 This hopefully shows you how easy it is to create report layouts from scratch in Document Creator. Of course, there is no need to start from scratch for every report, as you can easily adapt the provided templates to your needs for the most frequently used reports.
-If you want to explore Document Creator yourself, you can check out the latest demo available at [www.document-creator.com/downloads][www.document-creator.com/downloads].
+If you want to explore Document Creator yourself, you can check out the latest demo available at [www.document-creator.com/downloads](www.document-creator.com/downloads).
