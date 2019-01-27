@@ -10,6 +10,9 @@ tag:
 comments: true
 ---
 
+**NOTE:** This post is outdated. The Docker images for NAV are no longer maintained. To get a demo, download the extension for Business Central at [Document Creator | Downloads](https://www.document-creator.com/downloads/).
+{: .notice}
+
 Document Creator is an add-on that offers an intuitive report designer for Dynamics NAV, separating report-logic from layout/presentation. If you are interested in exploring the various features of Document Creator, but don't want to go through the steps of installing the Demo into your existing NAV environment, then Docker might help you out!
 Docker allows you to setup an NAV installation and get you started quickly, by creating something referred to as a *container*, which allows you to run a preconfigured, isolated NAV environment with everything you need.
 To explore the features of Document Creator, you can create such a container using the `documentcreator/nav2018_demo` image, running just a single command!
