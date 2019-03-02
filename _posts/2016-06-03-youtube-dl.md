@@ -32,7 +32,7 @@ If you're not too experienced in using terminals then don't worry; there are als
 If you are interested in finding out more about youtube-dl and its software architecture you may want to check out the [DESOSA: 2016](https://www.gitbook.com/book/delftswa/desosa2016/details) (*Delft Students on Software Architecture: 2016*) book. In a group of four we contributed to this book by writing the [chapter on youtube-dl](https://delftswa.gitbooks.io/desosa2016/content/youtube-dl/chapter.html).
 In this chapter you can find out all about the application, its developers, its features and architecture. You can also check out chapters on other interesting software systems such as [Atom](https://delftswa.gitbooks.io/desosa2016/content/atom/chapter.html), [GitLab](https://delftswa.gitbooks.io/desosa2016/content/gitlab/chapter.html) and [Ruby on Rails](https://delftswa.gitbooks.io/desosa2016/content/rails/chapter.html) in this book to learn more about them. Enjoy reading!
 
-![DESOSA Logo](https://www.gitbook.com/@delftswa/avatar)
+![DESOSA Logo](https://legacy.gitbook.com/@delftswa/avatar)
 
 ## Creating your own extractor for youtube-dl
 
