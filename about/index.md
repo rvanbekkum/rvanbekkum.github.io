@@ -23,7 +23,7 @@ WSB Solutions B.V.
 </strong>
 <p>Software Developer</p>
 
-<p>At WSB Solutions B.V., I work as ERP Software Developer, developing add-ins, extensions and customizations for Microsoft Dynamics 365 Business Central, formerly known as Microsoft Dynamics NAV or Navision.</a>. Development happens in the database-specific languages <a href="https://en.wikipedia.org/wiki/C/AL">C/AL</a> (in dedicated development environment, known as C/SIDE) and <a href="https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-reference-overview">AL</a> (within <a href="https://code.visualstudio.com/">Visual Studio Code</a>). 
+<p>At WSB Solutions B.V., I work as ERP Software Developer, developing add-ins, extensions and customizations for Microsoft Dynamics 365 Business Central, formerly known as Microsoft Dynamics NAV or Navision. Development happens in the database-specific languages <a href="https://en.wikipedia.org/wiki/C/AL">C/AL</a> (in dedicated development environment, known as C/SIDE) and <a href="https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-reference-overview">AL</a> (within <a href="https://code.visualstudio.com/">Visual Studio Code</a>).
 
 I am also one of the main developers of <a href="http://www.document-creator.com/">Document Creator</a>, an intuitive reporting solution for reports in Dynamics 365 Business Central. My work for this project includes development of the Business Central extension/NAV application-side, and .NET development of the <a href="https://www.fast-report.com/en/product/fast-report-net/">FastReport.NET</a>-based report engine, report designer, and Classic Report converter and RDLC Layout converter.</p>
 </div>
