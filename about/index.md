@@ -13,11 +13,33 @@ A few years later, in 2017, I obtained a MSc degree in Computer Science in the A
 # <span class="fa fa-suitcase"></span> Work
 
 <div>
+<img src="/assets/img/apportunix.png" class="resumelogo" style="width: 50px;" />
+<div class="verticalLine" style="border-left-color: #6a4f96">
+<span class="resumedates">August 2020 - Present</span>
+<strong>
+<a href="https://www.apportunix.com/" style="color: inherit;">
+Apportunix
+</a>
+</strong>
+<p>Product Owner</p>
+
+<p>Nowadays everybody is familiar with the private use of apps on their mobile. With the worldwide cloud transition and the new Dynamics 365 Business Central platform it's easy to add extra functionality to your ERP-system with the click of a mouse.</p>
+
+<p>At Apportunix we are specialized in app creation for Dynamics 365 Business Central. Apportunix is part of WSB Solutions, a medium sized IT company based in the Netherlands. About 5500 users from over 400 companies use our services daily. Using the Microsoft product range, we help these companies to work smarter, safer and more efficiently.</p>
+
+<p>We are a registered Microsoft Gold Partner. This distinction is awarded to those Microsoft partners that have proven to possess a high level of skill and experience, by employing trained and certified personnel and demonstrating a track record of successful implementations through customer references.</p>
+
+<p>In a team of product owners, we decide in which direction the offers from Apportunix will be heading, e.g., adding new products to our catalog, adding new features or enhancements to our existing products, continuously keeping track of developments that influence/concern our offers and finding ways to support our users the best way we can!</p>
+</div>
+
+</div>
+
+<div>
 <img src="/assets/img/wsb.png" class="resumelogo" style="width: 50px;" />
 <div class="verticalLine" style="border-left-color: #6a4f96">
 <span class="resumedates">February 2014 - Present</span>
 <strong>
-<a href="http://www.wsb-solutions.nl/" style="color: inherit;">
+<a href="https://www.wsb-solutions.nl/" style="color: inherit;">
 WSB Solutions B.V.
 </a>
 </strong>
@@ -35,7 +57,7 @@ I am also one of the main developers of <a href="http://www.document-creator.com
 <div class="verticalLine" style="border-left-color: #dadc56">
 <span class="resumedates">May 2015 - September 2015</span>
 <strong>
-<a href="http://www.swycs.com/" style="color: inherit;">
+<a href="https://www.swycs.com/" style="color: inherit;">
 DSP Innovation B.V.
 </a>
 </strong>
@@ -51,7 +73,7 @@ DSP Innovation B.V.
 <div class="verticalLine" style="border-left-color: #3db9ed">
 <span class="resumedates">October 2013 - July 2017</span>
 <strong>
-<a href="http://www.tudelft.nl/" style="color: inherit;">
+<a href="https://www.tudelft.nl/" style="color: inherit;">
 Delft University of Technology
 </a>
 </strong>
@@ -138,7 +160,7 @@ Delft University of Technology
 <div class="verticalLine" style="border-left-color: #3db9ed">
 <span class="resumedates">September 2015 - September 2017</span>
 <strong>
-<a href="http://www.tudelft.nl/" style="color: inherit;">
+<a href="https://www.tudelft.nl/" style="color: inherit;">
 Delft University of Technology
 </a>
 </strong>
@@ -155,7 +177,7 @@ Delft University of Technology
 <div class="verticalLine" style="border-left-color: #3db9ed">
 <span class="resumedates">September 2012 - July 2015</span>
 <strong>
-<a href="http://www.tudelft.nl/" style="color: inherit;">
+<a href="https://www.tudelft.nl/" style="color: inherit;">
 Delft University of Technology
 </a>
 </strong>
@@ -202,6 +224,7 @@ In the third year I chose for the Minor Robotics which involved the full-time de
 * ANTLR
 * Apache Pig [Basics]
 * Arduino
+* Docker
 * Microsoft Dynamics NAV
 * ROS
 * Spoofax
