@@ -2,7 +2,7 @@
 layout: post
 title:  "XLIFF Sync: Time for a complete overview"
 date:   2021-02-21
-excerpt: ""
+excerpt: "Just getting started with translations for your application, or curious on how you could work more efficiently in translating your applications? Read more about how to work more efficiently on translating your applications with XLIFF translation files."
 tag:
 - xliff
 - translation
@@ -83,7 +83,7 @@ If you enable this feature and build your app, then the [AL Language](https://ma
 {% capture withzerobalance %}
 /assets/img/xliffSync/generatedXliffFile.png
 {% endcapture %}
-{% include gallery images=withzerobalance caption="Generating the base XLIFF file for translation" cols=1 %}
+{% include gallery images=withzerobalance caption="A Generated base XLIFF file" cols=1 %}
 
 The XLIFF file that is generated only contains the original, non-translated text for all the captions, labels, tooltips and messages in your app.
 
@@ -468,7 +468,7 @@ You can add a task to your (Azure DevOps) build pipeline that uses the [XLIFF Sy
 The function below gives an example:
 
 **Check-AppTranslations.ps1**
-```ps
+```powershell
 Param(
     [Parameter(Mandatory=$false)]
     [string] $buildProjectFolder = $ENV:BUILD_REPOSITORY_LOCALPATH,
@@ -515,6 +515,7 @@ For requesting new features/enhancements or to report bugs you find, you can ope
 ## Resources
 
 * ["XLIFF Sync"](https://marketplace.visualstudio.com/items?itemName=rvanbekkum.xliff-sync) extension for Visual Studio Code
+* ["XLIFF Sync"](https://github.com/rvanbekkum/ps-xliff-sync) PowerShell module.
 * [Poedit](https://poedit.net/) open-source translation file editor
 
 ## References
