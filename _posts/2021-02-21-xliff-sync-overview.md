@@ -402,7 +402,7 @@ Here are some examples:
 
 * First off, the default settings for the extension are tailored to development for Microsoft Dynamics 365 Business Central apps/extensions in the AL Language.
   The XLIFF Generator included in the AL compiler generates XLIFF files with a **Developer** and **Xliff Generator** note.
-  Other XLIFF Generator, like Angular's `ng xi18n`/`ng extract-i18n` might be adding different notes, such as a **meaning** and **description** note.
+  Other XLIFF Generators, like Angular's `ng xi18n`/`ng extract-i18n` might be adding different notes, such as a **meaning** and **description** note.
   You can use the `xliffSync.xliffGeneratorNoteDesignation` and `xliffSync.developerNoteDesignation` settings to configure how XLIFF Sync will utilize notes to match translation units for translation files with different notes.
 * You can specify which languages should be considered as equivalents using the `xliffSync.equivalentLanguages` and `xliffSync.equivalentLanguagesEnabled` settings. This way you only need to enter the translations for one language and they will be copied to the translation files of equivalent languages automatically when you synchronize again.
 
