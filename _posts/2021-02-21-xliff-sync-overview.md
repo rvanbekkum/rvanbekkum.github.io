@@ -208,7 +208,7 @@ This command can also be invoked by opening the context menu on the base XLIFF f
 
 ![Synchronize Translation Units (Explorer)](/assets/img/xliffSync/synchronizeTranslationUnitsExplorer.png)
 
-This updates all the other XLIFF fi;es so that they will all have the exact same units as the base XLIFF file.
+This updates all the other XLIFF files so that they will all have the exact same units as the base XLIFF file.
 
 If the ID of a unit changed, then the sync. will try to match units of base and target files based on other properties of the units, i.e.:
 
@@ -268,7 +268,7 @@ To facilitate this, XLIFF Sync contributes two commands:
 
   ![Check for Missing Translations](/assets/img/xliffSync/checkForMissingTranslations.png)
 
-  This command will check all XLIFF translation files for missing translations and notify you whether or not any where found.
+  This command will check all XLIFF translation files for missing translations and notify you whether or not any were found.
   If found that one or more of your translation files has missing translations, you will get a notification for each file that has missing translations.
   You also have the option to open files with missing translations with your default XLIFF file editor using the **Open Externally** button from the informational message.
 
