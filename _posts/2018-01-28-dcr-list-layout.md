@@ -4,6 +4,7 @@ title:  "Creating a Report Layout for a Customer List in Document Creator"
 date:   2018-01-28
 excerpt: "As a C/SIDE developer in Microsoft Dynamics NAV, you may often be faced with developing layouts for customer-specific reports. With Document Creator, creating or modifying custom report layouts is immensely simplified and is just a matter of minutes instead of hours!"
 tag:
+- reporting
 - dynamics nav
 - document creator
 - custom report layouts
