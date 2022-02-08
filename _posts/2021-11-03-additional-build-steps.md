@@ -169,6 +169,8 @@ Please note that as a prerequisite you also need to have the `BcContainerHelper`
 
 ## Checking Coverage of your Permission Sets
 
+**Update**: [Stefan Maroń](https://stefanmaron.com/) and I have added an [LC0015](https://github.com/StefanMaron/BusinessCentral.LinterCop/wiki/LC0015) code analyzer rule now that checks permission set coverage as well. You can find this rule in the [Business Central LinterCop](https://github.com/StefanMaron/BusinessCentral.LinterCop).
+
 Next, something you might want to check, is that each AL object is covered by at least one of the permission sets of your app (of course, for those AL object types to which this applies).
 Say, someone adds a new AL object, but does not add it to any permission set, so it can never be used unless you have `SUPER` permissions, then this might be something you want to catch in your build pipelines.
 
@@ -182,6 +184,7 @@ Param(
     [string] $buildProjectFolder = $ENV:BUILD_REPOSITORY_LOCALPATH,
     [Parameter(Mandatory=$false)]
     [string[]] $appFolders,
+    [switch] $allAppFolders,
     [Parameter(Mandatory=$false)]
     [ValidateSet('no','error','warning')]
     [string] $AzureDevOps = 'error'
@@ -192,8 +195,12 @@ if ($AzureDevOps -eq 'no') {
 }
 
 if ((-not $appFolders) -or ($appFolders.Length -eq 0)) {
-    $appFolders = (Get-ChildItem $buildProjectFolder -Directory).Name | Where-Object { $("Test", "RuntimePackages") -notcontains $_ }
-    Write-Host "-appFolders not explicitly set, using subfolders of $buildProjectFolder: $appFolders"
+    Write-Host "-appFolders not explicitly set, using subfolders of $buildProjectFolder"
+    $appFolders = (Get-ChildItem $buildProjectFolder -Directory).Name | Where-Object { Test-Path (Join-Path $buildProjectFolder "$_\app.json") }
+    if (-not $allAppFolders) {
+        $appFolders = $appFolders | Where-Object { $("Test", "RuntimePackages") -notcontains $_ }
+    }
+    Write-Host "App Folders: $appFolders"
 }
 
 Sort-AppFoldersByDependencies -appFolders $appFolders -baseFolder $buildProjectFolder -WarningAction SilentlyContinue | ForEach-Object {
@@ -212,7 +219,7 @@ Sort-AppFoldersByDependencies -appFolders $appFolders -baseFolder $buildProjectF
     $xmlPermissionSetFileNames = $null
     $permissionSetALDeclarations = $null
 
-    $permissionSetALFiles = Get-ChildItem -Recurse "$appProjectFolder" *.PermissionSet.al
+    $permissionSetALFiles = Get-ChildItem -Recurse "$appProjectFolder" *.PermissionSet*.al
     $xmlPermissionSetFileNames = (Get-ChildItem $appProjectFolder -Filter "*PermissionSet*.xml").FullName
 
     if ($permissionSetALFiles -ne $null) {
@@ -220,12 +227,20 @@ Sort-AppFoldersByDependencies -appFolders $appFolders -baseFolder $buildProjectF
             Write-Host "##vso[task.logissue type=warning]Both XML and AL permission sets were found. Please switch to AL permission sets!"
         }
 
-        Write-Host "Found the following permission set object(s): $permissionSetALFiles"
+        Write-Host "##[section]Found the following permission set object(s)"
+        Write-Host $permissionSetALFiles
+        $permissionSetALDeclarations = [ordered]@{}
         foreach ($permissionSetALFile in $permissionSetALFiles) {
+            Write-Verbose "Permission set $permissionSetALFile covers the following objects:"
             $permissionSetALFileContent = Get-Content -Path $permissionSetALFile.FullName
-            $permissionSetALDeclarations = $permissionSetALFileContent | Select-String "($([string]::Join("|", ($objectTypeHash.GetEnumerator() | ForEach-Object { $_.Key })))) +([A-Za-z0-9_*]+)" -AllMatches | ForEach-Object {$_.Matches.Value}
+            $alObjectsCovered = $permissionSetALFileContent | Select-String "($([string]::Join("|", ($objectTypeHash.GetEnumerator() | ForEach-Object { $_.Key })))) +`"?([A-Za-z0-9_ *]+)`"? =" -AllMatches | ForEach-Object {$_.Matches.Value.Trim(" =")}
+            foreach ($alCoveredObject in $alObjectsCovered) {
+                Write-Verbose "  [$alCoveredObject]"
+                $permissionSetALDeclarations[$alCoveredObject] = $true;
+            }
         }
-        Write-Host "The permission set object(s) declare(s) permissions for the following objects: `n$($permissionSetALDeclarations | Format-List | Out-String)"
+        Write-Host "##[section]The permission set object(s) declare(s) permissions for the following objects"
+        Write-Host ($permissionSetALDeclarations.Keys | Format-List | Out-String)
     }
     else {
         if ($xmlPermissionSetFileNames -eq $null) {
@@ -234,27 +249,37 @@ Sort-AppFoldersByDependencies -appFolders $appFolders -baseFolder $buildProjectF
     }
 
     $alFiles = Get-ChildItem -Recurse "$appProjectFolder" *.al | Where-Object { -not $_.PSIsContainer } | Select-Object Name, FullName, Length
-    $missingPermissions = $false
+    $missingPermissions = 0
 
+    Write-Host "##[section]Checking coverage for each AL file..."
     foreach ($alFile in $alFiles) {
-        Write-Host "Searching for objects in $($alFile.Name) that require permissions"
+        Write-Verbose "Searching for objects in $($alFile.Name) that require permissions"
         $alFileContent = Get-Content -Path $alFile.FullName
 
+        # Check if file contains ObsoleteState = Removed;
+        if (($alFileContent -match "ObsoleteState = Removed;").Length -gt 0) {
+            Write-Verbose "Skipping $($alFile.Name) due to ObsoleteState = Removed"
+            continue
+        }
+
         $alObjectDeclarations = $alFileContent -cmatch "^($([string]::Join("|", ($objectTypeHash.GetEnumerator() | ForEach-Object { $_.Key })))) +([0-9]+) +.*$"
-        Write-Host "$($alObjectDeclarations.Length) object(s) found in $($alFile.Name)"
+        Write-Verbose "$($alObjectDeclarations.Length) object(s) found in $($alFile.Name)"
 
         foreach ($alObjectDeclaration in $alObjectDeclarations) {
-            $words = [regex]::split($alObjectDeclaration, ' +')
-            $objectType = $words[0]
-            $objectId = $words[1]
-            $objectName = $words[2]
+            $hasMatches = $alObjectDeclaration -match "([A-Za-z]+) +([0-9]+) +((`"[A-Za-z0-9_ *]+`")|([A-Za-z0-9_*]+))"
+            if (-not $hasMatches) {
+                continue
+            }
+            $objectType = $Matches[1]
+            $objectId = $Matches[2]
+            $objectName = $Matches[3]
+            Write-Verbose "Object Type: [$objectType]; Object ID: [$objectId]; Object name: [$objectName]"
 
             $foundObjectInPermissionSet = $false
             if ($permissionSetALDeclarations -ne $null) {
-                $foundObjectInPermissionSet = $permissionSetALDeclarations -contains "$objectType $objectName"
-                if (-not $foundObjectInPermissionSet) {
-                    $foundObjectInPermissionSet = $permissionSetALDeclarations -contains "$objectType *"
-                }
+                $foundObjectInPermissionSet = ($permissionSetALDeclarations.Contains("$objectType $objectName")) -or
+                                              (($permissionSetALDeclarations.Contains(("$objectType $objectName" -replace '"',''))) -or
+                                               ($permissionSetALDeclarations.Contains("$objectType *")))
             }
             else {
                 foreach ($xmlPermissionSetFileName in $xmlPermissionSetFileNames) {
@@ -266,17 +291,25 @@ Sort-AppFoldersByDependencies -appFolders $appFolders -baseFolder $buildProjectF
             }
 
             if (-not $foundObjectInPermissionSet) {
-                Write-Host "##vso[task.logissue type=$AzureDevOps]$objectType $objectId found in file $($alFile.Name) is missing in Permission Set."
-                $missingPermissions = $true
+                Write-Host "##vso[task.logissue type=$AzureDevOps]$objectType $objectId $objectName found in file $($alFile.Name) is missing in permission set(s)."
+                $missingPermissions += 1
             }
         }
     }
 
-    if ($missingPermissions -and ($AzureDevOps -eq 'error')) {
-        throw "Missing objects in permission set!"
+    Write-Host "##[section]Coverage results:"
+
+    if ($missingPermissions -gt 0) {
+        $message = "Missing $missingPermissions objects in permission set(s)!"
+        if ($AzureDevOps -eq 'error') {
+            throw $message
+        }
+        else {
+            Write-Host $message
+        }
     }
 
-    if (-not $missingPermissions) {
+    if ($missingPermissions -eq 0) {
         Write-Host "No problems found."
     }
 
