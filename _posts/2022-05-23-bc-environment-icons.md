@@ -49,6 +49,8 @@ You can download these icons by clicking the **Download** button below:
 
 [![download-icons](/assets/img/environmentIcons/download-button.png)](/assets/downloads/bc_environment_icons.zip)
 
+_Disclaimer: The Microsoft Dynamics 365 Business Central logo/icon is proprietary to Microsoft. Please keep this in mind. Therefore no attributions to me are necessary whatsoever, as all rights and ownership are kept by Microsoft. This is just a sample set of icons for personal usage with Business Central._
+
 Then, the first way, to use these icons is by applying them to your desktop shortcuts, i.e.:
 
 1. Open the **Properties** of your desktop shortcut (from the context-menu you can open with the right-mouse button)
